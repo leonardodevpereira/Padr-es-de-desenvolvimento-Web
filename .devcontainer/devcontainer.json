@@ -1,0 +1,44 @@
+{
+  // definição do nome do Container
+  "name": "Prodões de Desenvolvimento Web",
+
+  // Indica como a imagem vai ser criada 
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  // 8080 porta de acesso, libera os acessos
+  // 3306 porta de acesso, libera os acessos
+  "forwardPorts": [8080, 3306],
+
+  //  Efetua personalizações no Visual Studio Code.
+  "customizations": {
+    "vscode": {
+          // define as extensões que serão instalados
+        "extensions": [
+        "ms-azuretools.vscode-docker",  // Docker      
+        "vscjava.vscode-java-pack",     // Java      
+        "vmware.vscode-spring-boot",    // Spring Boot     
+        "vscjava.vscode-spring-boot-dashboard",   // Dashboard do aplicativo
+        "cweijan.vscode-mysql-client2", // MySQL  
+        "vscjava.vscode-spring-initializr" 
+      ],
+
+        //  Config visuais do Visual Studio Code
+      "settings": {
+        "workbench.colorTheme": "Dark Modern", // Tema
+        "editor.fontSize": 14, // Fonte do editor
+        "terminal.integrated.fontSize": 20,  //  Fonte do terminar
+        "java.server.launchMode": "Standard"  //  Forção o Java a iniciar no modo padrão
+      }
+    }
+  },
+
+   //  Executa na criação do container
+   //  Config o MySQL
+  "postCreateCommand": "/bin/bash .devcontainer/init-mysql.sh",
+
+   // Executa toda vez que o container é executado (roda toda vez que abrir o editor)
+   //  Inicia o MySQL
+  "postStartCommand": "service mysql start"
+}
