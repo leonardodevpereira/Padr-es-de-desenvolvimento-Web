@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,19 +15,20 @@ import jakarta.persistence.ManyToOne;
 @Entity
 @Getter
 @Setter
-public class Produto {
+public class Pagamento {
+
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String nome;
+    private BigDecimal valor;
 
-    private String descricao;
+    private LocalDateTime data;
 
-    private Short estoque;
+    private String status;
 
-    private BigDecimal preco;
+    private String tipo;
 
     @ManyToOne
-    private Categoria categoria; 
+    private Pedido pedido;
 }
