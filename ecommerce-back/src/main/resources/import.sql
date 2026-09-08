@@ -17,7 +17,7 @@ INSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (1, '2026-09-01
 NSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (2, '2026-09-01', 189.90);
 NSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (3, '2026-08-31', 79.90);
 NSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (4, '2026-08-30', 215.50);
-NSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (5, '2026-08-29', 120.00);
+NS  ERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (5, '2026-08-29', 120.00);
 INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES(1, 100.00, 1, 1);
 INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES(1, 89.90, 2, 2);
 INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES(2, 79.90, 3, 3);
