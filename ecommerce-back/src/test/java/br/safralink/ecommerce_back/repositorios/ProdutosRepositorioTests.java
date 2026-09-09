@@ -1,5 +1,8 @@
 package br.safralink.ecommerce_back.repositorios;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import java.math.BigDecimal;
 
 import org.junit.jupiter.api.Test;
@@ -26,5 +29,9 @@ public class ProdutosRepositorioTests {
         produto.setEstoque(Short.parseShort("10"));
 
         var categoria = categoriaRepositorio.findById(Short.parseShort("1")).orElseThrow();
+        
+        produtoRepositorio.save(produto);
+        assertNotNull(produto.getId());
+        assertEquals(6,produto.getId());
     }
 }

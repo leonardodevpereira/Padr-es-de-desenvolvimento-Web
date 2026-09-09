@@ -1,3 +1,4 @@
+        var
 insert into categoria (nome, descricao) values ('Informática', 'Produtos de Informática');
 insert into categoria (nome, descricao) values ('Livros', 'Livros Técnicos');
 insert into categoria (nome, descricao) values ('Eletrônicos', 'Aparelhos Eletrônicos');
@@ -14,10 +15,10 @@ INSERT INTO cliente (nome, email, cpf, telefone) VALUES('Carlos Santos', 'carlos
 INSERT INTO cliente (nome, email, cpf, telefone) VALUES('Ana Costa', 'ana.costa@email.com', '45678901234', '(14) 96666-4444');
 INSERT INTO cliente (nome, email, cpf, telefone) VALUES('Pedro Souza', 'pedro.souza@email.com', '56789012345', '(14) 95555-5555');
 INSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (1, '2026-09-01', 100.00);
-NSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (2, '2026-09-01', 189.90);
-NSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (3, '2026-08-31', 79.90);
-NSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (4, '2026-08-30', 215.50);
-NS  ERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (5, '2026-08-29', 120.00);
+iNSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (2, '2026-09-01', 189.90);
+iNSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (3, '2026-08-31', 79.90);
+iNSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (4, '2026-08-30', 215.50);
+INSERT INTO pedido (cliente_id, data_pedido, valor_total) VALUES (5, '2026-08-29', 120.00);
 INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES(1, 100.00, 1, 1);
 INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES(1, 89.90, 2, 2);
 INSERT INTO item_pedido (quantidade, valor_unitario, pedido_id, produto_id) VALUES(2, 79.90, 3, 3);
